@@ -14,42 +14,25 @@
 
   gtag('config', 'G-5GSBB861W0');
 </script>
-
-<style>
-p{
-  color: white;
-}
-  a{
-    color:green;
-    font-size: 20px;
-  }
-  h1{
-
-  }
-  h2{
-    color:yellow;
-  }
-  .top{
-    font-size:45px;
-    border: 5px #FDF01E dashed;
-    text-align: center;
-    padding: 15px;
-    margin:25px;
-    color:white;
-
-  }
-  body {
-  background-image: url("111.jpg");
-  background-repeat: repeat-x;
-  background-position: center;
-  background-attachment:fixed;
-
-}
-</style>
+<link rel="stylesheet" type="text/css" href="style.css"/>
 
 </head>
 <body>
   <h1 class="top" > Mingyu's web </h1>
+  <input id="blackwhite" type="button" value="어둡게" onclick="
+  var target = document.querySelector('body');
+  if(document.querySelector('#blackwhite').value ===
+  '어둡게'){
+    target.style.backgroundColor='black';
+    target.style.color='white';
+    document.querySelector('#blackwhite').value = '밝게';
+    }
+  else{
+    target.style.backgroundColor='white';
+    target.style.color='black';
+    document.querySelector('#blackwhite').value = '어둡게';
+  }
+  ">
   <p><iframe width="376" height="210" src="https://www.youtube.com/embed/WMweEpGlu_U?start=5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   </p>
   <p>안녕, 나는 김민규야.</p> <h2>BANANA</h2>
@@ -61,7 +44,21 @@ p{
     <li><a href="2.html">apple</a></li>
     <li><a href="3.html">orange</a></li>
   </ol>
-  <input type="button" value="안녕? 나를 눌러봐!" onclick="alert('나도 반가워!')">
+
+  <script>
+    var corworkers =['하낙','맨','동','소'];
+  </script>
+  <h2> Corworkers</h2>
+  <ul>
+    <script>
+      var i=0;
+      while (i<corworkers.length) {
+        document.write('<li>'+corworkers[i]+'</li>');
+        i=i+1
+      }
+    </script>
+  </ul>
+  <input type="button" value="안녕? 나를 눌러봐! (오른쪽 입력금지)" onclick="alert('나도 반가워!')">
   <input type="text" onkeydown="alert('누르지마! 난 아직 아무런 기능이 없어')">
 
 </body>
